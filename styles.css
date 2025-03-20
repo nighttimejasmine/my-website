@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('fonts/TestFont.ttf') format('truetype');
+    src: url('assets/fonts/TestFont-Regular.ttf') format('truetype');
 }
 
 body {
@@ -10,7 +10,7 @@ body {
     text-align: center;
     /* background-color: #f5f5f5; */
     background-image: url('assets/images/NightJasmine-Site_Backgrounds/webBackground02.jpg');
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
