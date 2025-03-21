@@ -1,0 +1,43 @@
+{
+    "currentlyReading": [
+      {
+        "title": "Onyeka and the Academy of the Sun",
+        "author": "Tọlá Okogwu",
+        "status": "Reading",
+        "progress": "Page 30 / 270",
+        "source": "Goodreads",
+        "updated": "2025-03-20"
+      },
+      {
+        "title": "Dagger to the Heart",
+        "author": "oori_",
+        "status": "Completed",
+        "progress": "Chapter 5 / ?",
+        "source": "Webtoon",
+        "updated": "2025-03-16"
+      }
+    ],
+    "currentlyWatching": [
+      {
+        "title": "Lupin III",
+        "status": "Watching",
+        "progress": "Episode 10 / 23",
+        "source": "MAL",
+        "updated": "2025-03-20"
+      },
+      {
+        "title": "Next Level Chef",
+        "status": "Watching",
+        "progress": "Episode 4 / 8",
+        "source": "Serializd",
+        "updated": "2025-03-19"
+      },
+      {
+        "title": "The Only Girl in the Orchestra",
+        "status": "Completed",
+        "progress": "Movie",
+        "source": "Letterboxd",
+        "updated": "2025-03-17"
+      }
+    ]
+  } 

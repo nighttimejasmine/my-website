@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Lupin III",
+        "image": "https://image.tmdb.org/t/p/original/usRBsr9OWeYmVpkP7RYNrPed6K2.jpg",
+        "status": "watching",
+        "progress": "Episode 10 / 23",
+        "source": "MAL",
+        "link": "https://myanimelist.net/anime/1412/Lupin_III"
+    },
+    {
+        "title": "The Only Girl in the Orchestra (2023)",
+        "image": "https://image.tmdb.org/t/p/original/zpsTStOYGfkF590K3kCEjWXCleN.jpg",
+        "status": "completed",
+        "source": "Letterboxd",
+        "link": "https://letterboxd.com/film/the-only-girl-in-the-orchestra/"
+    },
+    {
+        "title": "Next Level Chef",
+        "image": "https://image.tmdb.org/t/p/original/uow4UjWpJvbuk5hoxEhaZqkifrp.jpg",
+        "status": "watching",
+        "progress": "Episode 4 / 8",
+        "source": "Serializd",
+        "link": "https://www.serializd.com/show/Next-Level-Chef-129500"
+    }
+]

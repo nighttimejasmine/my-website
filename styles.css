@@ -50,3 +50,150 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+  
+  /* Main section */
+  main {
+    padding: 20px;
+  }
+  
+  /* Buttons/Links */
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background: #805D80;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #C98B8B;
+  }
+  
+  /* Dashboard Container */
+  .dashboard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #7D869C;
+    padding: 15px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+/* ===================================== */
+/* Dashboard Links Section on Index Page */
+.dashboard-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.dashboard-btn {
+    background: #805D80; /* Deep Mauve */
+    color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+.dashboard-btn:hover {
+    background: #C98B8B; /* Dusty Rose */
+}
+
+/* Kenmei-Style Dashboard Container for Reading/Watching Pages */
+.dashboard {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.activity-row:last-child {
+    border-bottom: none;
+}
+.activity-row img {
+    width: 60px; /* Adjust size */
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+.activity-row h3 {
+    margin: 0 0 5px;
+}
+.activity-row a {
+    text-decoration: none;
+    color: #805D80;
+    font-weight: bold;
+}
+
+/* Example Activity Row (to be used in your dashboard pages) */
+/* .activity-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.activity-row:last-child {
+    border-bottom: none;
+}
+.activity-row img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.activity-row h3 {
+    margin: 0 0 5px;
+}
+
+.activity-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.activity-row:last-child {
+    border-bottom: none;
+}
+.activity-row img {
+    width: 60px; /* Adjust size 
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+.activity-row h3 {
+    margin: 0 0 5px;
+}
+.activity-row a {
+    text-decoration: none;
+    color: #805D80;
+    font-weight: bold;
+} */
+

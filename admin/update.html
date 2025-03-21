@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Logs</title>
+</head>
+<body>
+    <h2>Update Currently Reading/Watching</h2>
+    <form id="update-form">
+        <label>Title: <input type="text" id="title"></label><br>
+        <label>Status: <input type="text" id="status"></label><br>
+        <label>Progress: <input type="text" id="progress"></label><br>
+        <label>Source: <input type="text" id="source"></label><br>
+        <button type="submit">Update Log</button>
+    </form>
+
+    <script>
+        document.getElementById("update-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            
+            const newLog = {
+                title: document.getElementById("title").value,
+                status: document.getElementById("status").value,
+                progress: document.getElementById("progress").value,
+                source: document.getElementById("source").value,
+                updated: new Date().toISOString().split("T")[0] // Format as YYYY-MM-DD
+            };
+
+            const response = await fetch("/update-log", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newLog)
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        });
+    </script>
+</body>
+</html>
