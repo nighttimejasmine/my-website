@@ -66,7 +66,7 @@ function loadWatchingLogs() {
 // Function to return the correct source icon based on the source name
 function getSourceIcon(source) {
     const icons = {
-        "MAL": "https://icons-for-free.com/iff/png/256/MyAnimeList-1329545826150253280.png",
+        "MAL": "https://www.svgrepo.com/show/331489/myanimelist.svg",
         "Letterboxd": "https://cdn-1.webcatalog.io/catalog/letterboxd/letterboxd-icon-unplated.png?v=1740099065439",
         "Serialzd": "https://media.imgcdn.org/repo/2024/02/serializd/65cb301c74859-serializd-Icon.webphttps://oakreef.ie/icons/serializd.png",
         "MDL": "https://play-lh.googleusercontent.com/s4s3KGi3Bikz2J80YBKsbdOASUblBN7m7OrdXHppbCdg8AYfAizKO9sx05cHFiMuTI86",

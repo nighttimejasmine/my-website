@@ -127,7 +127,7 @@ body {
     /* background: linear-gradient(135deg, #4E426D, #A89DCB, #D7C4ED); */
     background-image: url('assets/images/NightJasmine-Site_Backgrounds/webBackground03.jpg');
     background-size: cover;
-    /* color: #ffffff; */
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -204,8 +204,8 @@ body {
   
   /* Source icon styling */
   .source-icon {
-    width: 14px;
-    height: 14px;
+    width: 64px !important;
+    height: 64px !important; 
     margin-top: 10px;
     opacity: 0.8;
   }

@@ -124,7 +124,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("data/currently-reading.json")
+    fetch("server/data/readingLogs.json")
       .then(response => response.json())
       .then(data => displayReadingLogs(data))
       .catch(error => console.error("Error loading reading logs:", error));
@@ -145,16 +145,17 @@ document.addEventListener("DOMContentLoaded", function () {
       let entryDiv = document.createElement("div");
       entryDiv.classList.add("entry");
   
+      // Set inner HTML with clickable cover and hover overlay
       entryDiv.innerHTML = `
-        <a href="${entry.link}" target="_blank">
-          <img src="${entry.cover}" alt="${entry.title}">
+        <a href="${entry.link}" target="_blank"> 
+            <img src="${entry.cover}" alt="${entry.title}">
+            <div class="overlay">
+            <h3>${entry.title}</h3>
+            <p>${entry.author}</p>
+            <p>${statusDisplay}</p>
+            <img src="${sourceIcon}" alt="${entry.source}" class="source-icon">
+            </div>
         </a>
-        <div class="overlay">
-          <h3>${entry.title}</h3>
-          <p>${entry.author}</p>
-          <p>${statusDisplay}</p>
-          <img src="${sourceIcon}" alt="${entry.source}" class="source-icon">
-        </div>
       `;
       container.appendChild(entryDiv);
     });
@@ -170,4 +171,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  

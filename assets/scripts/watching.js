@@ -168,13 +168,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set inner HTML with clickable cover and hover overlay
       entryDiv.innerHTML = `
         <a href="${entry.link}" target="_blank">
-          <img src="${entry.cover}" alt="${entry.title}">
+            <img src="${entry.cover}" alt="${entry.title}">
+            <div class="overlay">
+            <h3>${entry.title}</h3>
+            <p>${statusText}</p>
+            <img src="${sourceIcon}" alt="${entry.source}" class="source-icon">
+            </div>
         </a>
-        <div class="overlay">
-          <h3>${entry.title}</h3>
-          <p>${statusText}</p>
-          <img src="${sourceIcon}" alt="${entry.source}" class="source-icon">
-        </div>
       `;
       container.appendChild(entryDiv);
     });
@@ -183,9 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function getSourceIcon(source) {
     // Map known source names to their icon paths
     const icons = {
-        "MAL": "https://icons-for-free.com/iff/png/256/MyAnimeList-1329545826150253280.png",
-        "Letterboxd": "https://cdn-1.webcatalog.io/catalog/letterboxd/letterboxd-icon-unplated.png?v=1740099065439",
-        "Serialzd": "https://media.imgcdn.org/repo/2024/02/serializd/65cb301c74859-serializd-Icon.webphttps://oakreef.ie/icons/serializd.png",
+        "MAL": "https://www.svgrepo.com/show/331489/myanimelist.svg",
+        "Letterboxd": "https://a.ltrbxd.com/logos/letterboxd-decal-dots-neg-rgb-500px.png",
+        "Serializd": "https://oakreef.ie/icons/serializd.png",
         "MDL": "https://play-lh.googleusercontent.com/s4s3KGi3Bikz2J80YBKsbdOASUblBN7m7OrdXHppbCdg8AYfAizKO9sx05cHFiMuTI86",
     };
     return icons[source] || "assets/images/NightJasmine-Site_Backgrounds/webBackground04.jpg";
