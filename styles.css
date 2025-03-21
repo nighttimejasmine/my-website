@@ -71,16 +71,6 @@ nav ul li a:hover {
     background: #C98B8B;
   }
   
-  /* Dashboard Container 
-  .dashboard {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-  }
-    */
-  
   /* Footer */
   footer {
     background: #7D869C;
@@ -96,9 +86,22 @@ nav ul li a:hover {
     margin: 0 10px;
   }
 
+#reading-dashboard, #watching-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.entry {
+    background: rgba(170, 154, 154, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+}
+
 /* ===================================== */
 /* Dashboard Links Section on Index Page */
-.dashboard-links {
+/* .dashboard-links {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -106,7 +109,7 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 .dashboard-btn {
-    background: #805D80; /* Deep Mauve */
+    background: #805D80; // Deep Mauve
     color: #fff;
     padding: 20px 30px;
     text-decoration: none;
@@ -115,10 +118,10 @@ nav ul li a:hover {
     transition: background 0.3s ease;
 }
 .dashboard-btn:hover {
-    background: #C98B8B; /* Dusty Rose */
+    background: #C98B8B; // Dusty Rose
 }
 
-/* Kenmei-Style Dashboard Container for Reading/Watching Pages */
+// Kenmei-Style Dashboard Container for Reading/Watching Pages 
 .dashboard {
     max-width: 800px;
     margin: 40px auto;
@@ -138,7 +141,7 @@ nav ul li a:hover {
     border-bottom: none;
 }
 .activity-row img {
-    width: 60px; /* Adjust size */
+    width: 60px; // Adjust size
     height: 60px;
     border-radius: 5px;
     margin-right: 15px;
@@ -151,8 +154,9 @@ nav ul li a:hover {
     text-decoration: none;
     color: #805D80;
     font-weight: bold;
-}
-
+} 
+*/
+/* ========================================================= */
 /* Example Activity Row (to be used in your dashboard pages) */
 /* .activity-row {
     display: flex;
