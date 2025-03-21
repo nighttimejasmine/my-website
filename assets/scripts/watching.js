@@ -41,19 +41,47 @@
 //     });
 // }
 
+
+// ==================================================
+// ------------- Simple Display of Data -------------
+// fetch('/server/data/watchingLogs.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         const dashboard = document.getElementById('watching-dashboard');
+//         data.forEach(entry => {
+//             const div = document.createElement('div');
+//             div.classList.add('entry');
+//             div.innerHTML = `
+//                 <img src="${entry.image}" alt="${entry.title}" style="width:100px">
+//                 <h3>${entry.title}</h3>
+//                 <p>${entry.status}</p>
+//             `;
+//             dashboard.appendChild(div);
+//         });
+//     })
+//     .catch(error => console.error('Error loading watching logs:', error));
+
+
 fetch('/server/data/watchingLogs.json')
-    .then(response => response.json())
-    .then(data => {
-        const dashboard = document.getElementById('watching-dashboard');
-        data.forEach(entry => {
-            const div = document.createElement('div');
-            div.classList.add('entry');
-            div.innerHTML = `
-                <img src="${entry.image}" alt="${entry.title}" style="width:100px">
+.then(response => response.json())
+.then(data => displayWatchingLogs(data))
+.catch(error => console.error('Error loading JSON:', error));
+
+function displayWatchingLogs(data) {
+    const container = document.getElementById("watching-list");
+    container.innerHTML = "";
+
+    data.forEach(entry => {
+        const item = document.createElement("div");
+        item.classList.add("entry");
+        item.innerHTML = `
+            <img src="${entry.cover}" alt="${entry.title}">
+            <div class="overlay">
                 <h3>${entry.title}</h3>
-                <p>${entry.status}</p>
-            `;
-            dashboard.appendChild(div);
-        });
-    })
-    .catch(error => console.error('Error loading watching logs:', error));
+                <p>${entry.platform}</p>
+                <p>Status: ${entry.status}</p>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}

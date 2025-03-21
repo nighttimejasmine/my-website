@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currently Reading</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-
-    <header>
+    <div class="dashboard-container">
         <h1>Currently Reading</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="currently-watching.html">Currently Watching</a>
-        </nav>
-    </header>
+        <div id="reading-list" class="entry-list">
+            <!-- Literature will be loaded here -->
+        </div>
+    </div>
 
-    <section id="reading-dashboard"></section>
+    <div class="back-links">
+        <a href="index.html">Home</a>
+        <a href="currently-watching.html">Currently Watching</a>
+    </div>
 
     <script src="assets/scripts/reading.js"></script>
 </body>

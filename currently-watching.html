@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currently Watching</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-
-    <header>
+    <div class="dashboard-container">
         <h1>Currently Watching</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="currently-reading.html">Currently Reading</a>
-        </nav>
-    </header>
+        <div id="watching-list" class="entry-list">
+            <!-- Media will be loaded here -->
+        </div>
+    </div>
 
-    <section id="watching-dashboard"></section>
+    <div class="back-links">
+        <a href="index.html">Home</a>
+        <a href="currently-reading.html">Currently Reading</a>
+    </div>
 
     <script src="assets/scripts/watching.js"></script>
 </body>

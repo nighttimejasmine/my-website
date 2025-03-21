@@ -2,7 +2,7 @@
     {
         "title": "Onyeka and the Academy of the Sun",
         "author": "Tọlá Okogwu",
-        "image": "https://m.media-amazon.com/images/I/81bql0rR1VL.jpg",
+        "cover": "https://m.media-amazon.com/images/I/81bql0rR1VL.jpg",
         "status": "reading",
         "source": "GoodReads",
         "link": "https://www.goodreads.com/book/show/59004680-onyeka-and-the-academy-of-the-sun"
@@ -10,7 +10,7 @@
     {
         "title": "Dagger to the Heart",
         "author": "oori_",
-        "image": "/assets/images/dagger-to-the-heart-1.webp",
+        "cover": "/assets/images/dagger-to-the-heart-1.webp",
         "status": "reading",
         "source": "Webtoon",
         "link": "https://www.webtoons.com/en/fantasy/dagger-to-the-heart/list?title_no=7115"
@@ -18,7 +18,7 @@
     {
         "title": "Legend of an Angel",
         "author": "Yagi Norihiro ",
-        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552129622i/6473751.jpg",
+        "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552129622i/6473751.jpg",
         "status": "reading",
         "source": "Kenmei",
         "link": "https://www.kenmei.co/series/legend-of-an-angel"
