@@ -71,7 +71,7 @@ nav ul li a:hover {
     background: #C98B8B;
   }
   
-  /* Dashboard Container */
+  /* Dashboard Container 
   .dashboard {
     max-width: 800px;
     margin: 20px auto;
@@ -79,6 +79,7 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
   }
+    */
   
   /* Footer */
   footer {

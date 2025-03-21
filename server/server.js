@@ -82,34 +82,81 @@
 
 // ====================================================================
 
-require("dotenv").config(); // import dotenv in server
+// require("dotenv").config(); // import dotenv in server
+// const express = require("express");
+// const cors = require("cors");
+// const fs = require("fs");
+// const app = express();
+// // -------------- App Access to the API Keys --------------
+// // const goodreadsApiKey = process.env.GOODREADS_API_KEY; 
+// // const malClientId = process.env.MAL_CLIENT_ID;
+// // ------------- Log Test Variable = check if APIs are loading correctly -----------
+// // console.log("Goodreads API Key:", process.env.GOODREADS_API_KEY);
+// console.log("MAL API Key:", process.env.malClientId);
+
+// app.use(cors());
+// app.use(express.json());
+
+// app.get("/api/reading", (req, res) => {
+//     fs.readFile("./server/data/readingLogs.json", "utf8", (err, data) => {
+//         if (err) return res.status(500).send("Error loading data.");
+//         res.json(JSON.parse(data));
+//     });
+// });
+
+// app.get("/api/watching", (req, res) => {
+//     fs.readFile("./server/data/watchingLogs.json", "utf8", (err, data) => {
+//         if (err) return res.status(500).send("Error loading data.");
+//         res.json(JSON.parse(data));
+//     });
+// });
+
+// app.listen(5000, () => console.log("Server running on port 5000"));
+
+// =================================================================================
+
 const express = require("express");
-const cors = require("cors");
 const fs = require("fs");
 const app = express();
-// -------------- App Access to the API Keys --------------
-// const goodreadsApiKey = process.env.GOODREADS_API_KEY; 
-// const malClientId = process.env.MAL_CLIENT_ID;
-// ------------- Log Test Variable = check if APIs are loading correctly -----------
-// console.log("Goodreads API Key:", process.env.GOODREADS_API_KEY);
-console.log("MAL API Key:", process.env.malClientId);
+const PORT = 3000;
 
-app.use(cors());
 app.use(express.json());
+app.use(express.static("public")); // Serve static files
 
-app.get("/api/reading", (req, res) => {
-    fs.readFile("./server/data/readingLogs.json", "utf8", (err, data) => {
-        if (err) return res.status(500).send("Error loading data.");
-        res.json(JSON.parse(data));
+// Route to update logs.json
+app.post("/update-log", (req, res) => {
+    const newLog = req.body;
+
+    // Update readingLogs.json
+    fs.readFile("readingLogs.json", (err, data) => {
+        if (err) return res.status(500).json({ message: "Error with ReadingLogs file" });
+
+        // if (["Goodreads", "Webtoon", "Kenmei"].includes(newLog.source)) {
+        //     logs.currentlyReading.push(newLog);
+
+        logs.currentlyReading.push(newLog);
+
+        fs.writeFile("readingLogs.json", JSON.stringify(logs, null, 2), (err) => {
+            if (err) return res.status(500).json({ message: "Error updating logs" });
+
+            res.json({ message: "Log updated successfully!" });
+
+        });
+
+    });
+
+    // Update watchingLogs.json
+    fs.readFile("watchingLogs.json", (err, data) => {
+        if (err) return res.status(500).json({ message: "Error with WatchingLogs file" });
+
+        logs.currentlyWatching.push(newLog);
+
+        fs.writeFile("watchingLogs.json", JSON.stringify(logs, null, 2), (err) => {
+            if (err) return res.status(500).json({ message: "Error updating logs" });
+
+            res.json({ message: "Watching Log successfully updated!" });
+        });
     });
 });
 
-app.get("/api/watching", (req, res) => {
-    fs.readFile("./server/data/watchingLogs.json", "utf8", (err, data) => {
-        if (err) return res.status(500).send("Error loading data.");
-        res.json(JSON.parse(data));
-    });
-});
-
-app.listen(5000, () => console.log("Server running on port 5000"));
-
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

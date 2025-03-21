@@ -72,28 +72,75 @@
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", async function () {
-    const readingDashboard = document.getElementById("reading-dashboard");
+// ====================================================================================
 
-    try {
-        const response = await fetch("http://localhost:5000/api/reading");
-        const readingLogs = await response.json();
+// document.addEventListener("DOMContentLoaded", async function () {
+//     const readingDashboard = document.getElementById("reading-dashboard");
 
-        readingDashboard.innerHTML = "";
-        readingLogs.forEach(log => {
-            const logEntry = document.createElement("div");
-            logEntry.classList.add("activity-row");
-            logEntry.innerHTML = `
-                <img src="${log.image}" alt="${log.title}">
-                <div>
-                    <h3><a href="${log.link}" target="_blank">${log.title}</a></h3>
-                    <p>${log.author}</p>
-                    <p><strong>${log.status}</strong></p>
-                </div>
-            `;
-            readingDashboard.appendChild(logEntry);
-        });
-    } catch (error) {
-        console.error("Error fetching logs:", error);
-    }
+//     try {
+//         const response = await fetch("http://localhost:5000/api/reading");
+//         const readingLogs = await response.json();
+
+//         readingDashboard.innerHTML = "";
+//         readingLogs.forEach(log => {
+//             const logEntry = document.createElement("div");
+//             logEntry.classList.add("activity-row");
+//             logEntry.innerHTML = `
+//                 <img src="${log.image}" alt="${log.title}">
+//                 <div>
+//                     <h3><a href="${log.link}" target="_blank">${log.title}</a></h3>
+//                     <p>${log.author}</p>
+//                     <p><strong>${log.status}</strong></p>
+//                 </div>
+//             `;
+//             readingDashboard.appendChild(logEntry);
+//         });
+//     } catch (error) {
+//         console.error("Error fetching logs:", error);
+//     }
+// });
+
+
+// =======================================================================
+// ============ Fetch & Display data from JSON Files =====================
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("data/readingLogs.json")
+        .then(response => response.json())
+        .then(data => {
+            displayLogs(data);
+        })
+        .catch(error => console.error("Error loading reading logs:", error));
 });
+
+function displayLogs(data) {
+    const container = document.getElementById("reading-logs");
+
+    Object.keys(data).forEach(platform => {
+        const platformSection = document.createElement("div");
+        platformSection.classList.add("platform");
+
+        const platformTitle = document.createElement("h2");
+        platformTitle.textContent = platform.toUpperCase();
+        platformSection.appendChild(platformTitle);
+
+        data[platform].forEach(entry => {
+            const logEntry = document.createElement("div");
+            logEntry.classList.add("log-entry");
+
+            const img = document.createElement("img");
+            img.src = entry.image;
+            img.alt = entry.title;
+
+            const details = document.createElement("div");
+            details.innerHTML = `<h3>${entry.title}</h3><p>${entry.status}</p>`;
+
+            logEntry.appendChild(img);
+            logEntry.appendChild(details);
+            platformSection.appendChild(logEntry);
+        });
+
+        container.appendChild(platformSection);
+    });
+}
+
