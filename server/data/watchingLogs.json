@@ -21,5 +21,13 @@
         "progress": "Episode 4 / 8",
         "source": "Serializd",
         "link": "https://www.serializd.com/show/Next-Level-Chef-129500"
+    },
+    {
+        "title": "Undercover High School",
+        "cover": "https://image.tmdb.org/t/p/original/6cQTXsrBkiUHOnaAeIvYp4gVWjL.jpg",
+        "status": "watching",
+        "progress": "Episode 6 / 12",
+        "source": "MDL",
+        "link": "https://mydramalist.com/765779-undercover-high-school"
     }
 ]

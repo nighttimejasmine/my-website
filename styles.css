@@ -12,6 +12,8 @@ body {
     background-image: url('assets/images/NightJasmine-Site_Backgrounds/webBackground02.jpg');
     background-size: auto;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .banner {

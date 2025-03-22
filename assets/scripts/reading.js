@@ -60,68 +60,8 @@
 //     })
 //     .catch(error => console.error('Error loading reading logs:', error));
 
-// --------------------------------------------
 
-// fetch('/server/data/readingLogs.json')
-// .then(response => response.json())
-// .then(data => displayReadingLogs(data))
-// .catch(error => console.error('Error loading JSON:', error));
-
-// function displayReadingLogs(data) {
-//     const container = document.getElementById("reading-list");
-//     container.innerHTML = "";
-
-//     data.forEach(entry => {
-//         const item = document.createElement("div");
-//         item.classList.add("entry");
-//         item.innerHTML = `
-//             <img src="${entry.cover}" alt="${entry.title}">
-//             <div class="overlay">
-//                 <h3>${entry.title}</h3>
-//                 <p>${entry.author}</p>
-//                 <p>Status: ${entry.status}</p>
-//             </div>
-//         `;
-//         container.appendChild(item);
-//     });
-// }
-
-// --------------------- Without Source Icons -----------------------
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     fetch('/server/data/readingLogs.json')
-//       .then(response => response.json())
-//       .then(data => displayReadingLogs(data))
-//       .catch(error => console.error('Error loading reading logs:', error));
-//   });   
-  
-//   function displayReadingLogs(data) {
-//     const container = document.getElementById("reading-list");
-//     container.innerHTML = ""; // Clear "Loading" message
-  
-//     data.forEach(entry => {
-//       const entryDiv = document.createElement("div");
-//       entryDiv.classList.add("entry");
-  
-//       // Create inner HTML with clickable cover (opens link in new tab)
-//       entryDiv.innerHTML = `
-//         <a href="${entry.link}" target="_blank">
-//           <img src="${entry.cover}" alt="${entry.title}">
-//         </a>
-//         <div class="overlay">
-//           <h3>${entry.title}</h3>
-//           <p>${entry.author}</p>
-//           <p>Status: ${entry.status}</p>
-//           <p>Progress: ${entry.progress}</p>
-//         </div>
-//       `;
-//       container.appendChild(entryDiv);
-//     });
-//   }
-
-
-// ===============
-
+// -----------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("server/data/readingLogs.json")

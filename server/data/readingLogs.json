@@ -4,6 +4,7 @@
         "author": "Tọlá Okogwu",
         "cover": "https://m.media-amazon.com/images/I/81bql0rR1VL.jpg",
         "status": "reading",
+        "progress": "13%",
         "source": "GoodReads",
         "link": "https://www.goodreads.com/book/show/59004680-onyeka-and-the-academy-of-the-sun"
     },
@@ -12,6 +13,7 @@
         "author": "oori_",
         "cover": "/assets/images/dagger-to-the-heart-1.webp",
         "status": "reading",
+        "progress": "chp 5 / ?",
         "source": "Webtoon",
         "link": "https://www.webtoons.com/en/fantasy/dagger-to-the-heart/list?title_no=7115"
     },
@@ -20,6 +22,7 @@
         "author": "Yagi Norihiro ",
         "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552129622i/6473751.jpg",
         "status": "reading",
+        "progress": "chp 8/89",
         "source": "Kenmei",
         "link": "https://www.kenmei.co/series/legend-of-an-angel"
     }
