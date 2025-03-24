@@ -3,8 +3,32 @@
     src: url('assets/fonts/TestFont-Regular.ttf') format('truetype');
 }
 
-body {
+@font-face {
+    font-family: 'WeBoldNow_font';
+    src: url('assets/fonts/Weboldnow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+font-family: 'SimplyYours_font';
+src: url('assets/fonts/Simplyyours-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* Header font */
+h1, h2, h3 {
+    font-family: 'WeBoldNow_font', sans-serif;
+  }
+  
+  /* Accent font for specific elements */
+  .nav, .button, .special-text {
     font-family: 'MyCustomFont', sans-serif;
+  }
+
+body {
+    font-family: 'SimplyYours_font', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -25,9 +49,9 @@ body {
 }
 
 .banner h1 {
-    color: white;
+    color: #B8A1D9;
     font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px #805D80;
 }
 
 nav ul {
@@ -42,7 +66,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #805D80;
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 5px;

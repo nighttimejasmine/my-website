@@ -1,6 +1,13 @@
 /* ===================================== */
+@font-face {
+font-family: 'SimplyYours_font';
+src: url('assets/fonts/Simplyyours-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "SimplyYours_font", sans-serif;
     /* background: linear-gradient(135deg, #4E426D, #A89DCB, #D7C4ED); */
     background-image: url('assets/images/NightJasmine-Site_Backgrounds/webBackground03.jpg');
     background-size: cover;
